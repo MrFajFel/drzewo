@@ -18,3 +18,7 @@ node5 = TreeNode(3,None,None,node2)
 tree.add_node(node5,node2)
 
 tree.dfs_show(tree.root)
+
+print("------------")
+
+tree.bfs_show()

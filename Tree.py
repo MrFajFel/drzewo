@@ -26,3 +26,18 @@ class Tree:
         if node.right is not None:
             self.dfs_show(node.right)
         return
+
+
+    def bfs_show(self):
+        queue = []
+        node =  self.root
+        while True:
+            if node.left is not None:
+                queue.append(node.left)
+            if node.right is not None:
+                queue.append(node.right)
+            print(node.value)
+            try:
+                node = queue.pop(0)
+            except IndexError:
+                break
